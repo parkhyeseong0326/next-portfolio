@@ -1,0 +1,46 @@
+.header {
+    margin: 0;
+    padding: 0;
+    background-color: beige;
+    top: 0; left: 0;
+    width: 100%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.nav_logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding-left: 30px;
+    color: gray;
+}
+
+.nav_logo span {
+    font-size: 25px;
+    padding-left: 20px;
+}
+
+.navmenu {
+    padding-right: 100px;
+}
+
+.navlist {
+    display: flex;
+    list-style: none;
+}
+
+.navlist li {
+    padding: 8px 20px;
+}
+
+.navlist a {
+    font-size: 20px;
+    text-decoration: none;
+    color: gray;
+}
