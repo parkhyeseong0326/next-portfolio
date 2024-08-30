@@ -1,7 +1,6 @@
 .header {
     margin: 0;
     padding: 0;
-    background-color: beige;
     top: 0; left: 0;
     width: 100%;
 }
@@ -17,13 +16,13 @@
     display: flex;
     align-items: center;
     text-decoration: none;
-    padding-left: 30px;
+    padding-left: 100px;
     color: gray;
 }
 
 .nav_logo span {
-    font-size: 25px;
-    padding-left: 20px;
+    font-size: 23px;
+    padding-left: 25px;
 }
 
 .navmenu {
