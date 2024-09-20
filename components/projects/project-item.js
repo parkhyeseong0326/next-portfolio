@@ -15,7 +15,8 @@ export default function ProjectItem({data}) {
     const description = data.properties?.설명.rich_text[0].plain_text;
     const github = data.properties?.Github.url;
     const imgSrc = data.cover.file?.url || data.cover.external.url;
-
+    const demo = data.properties?.Demo.url;
+    console.log(demo);
     const router = useRouter();
 
     function countWorkDays(Start, End) {
@@ -34,9 +35,9 @@ export default function ProjectItem({data}) {
     
     const workDay = countWorkDays(startDate,endDate)
     return (
-        <Card sx={{width: 320}}>
+        <Card sx={{width: 345, display: 'flex', flexDirection:'column', justifyContent:"space-between"}}>
             <CardMedia
-                sx={{height : 150}}
+                sx={{height : 300}}
                 image={imgSrc}
                 title={title}
             />
@@ -56,9 +57,8 @@ export default function ProjectItem({data}) {
                 </Typography>
             </CardContent>
             <CardActions>
-                <Button size="small" onClick={() => {
-                    router.push(github)
-                }}>Visit Link</Button>
+                {demo && (<Button size="samll" onClick={() => {router.push(demo);}}>View Demo</Button>)}
+                <Button size="small" onClick={() => {router.push(github)}}>Visit Link</Button>
             </CardActions>
         </Card>
     );
